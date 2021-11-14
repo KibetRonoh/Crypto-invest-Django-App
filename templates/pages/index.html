@@ -1,0 +1,1153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FreeSmartCoin - Title</title>
+
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- start preloader -->
+    <div class="preloader" id="preloader"></div>
+    <!-- end preloader -->
+
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+
+    <!-- header-section start -->
+    <header id="header-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row d-flex header-area">
+                    <div class="logo-section flex-grow-1 d-flex align-items-center">
+                        <a class="site-logo site-title" href="index.html">FreeSmartCoin</a>
+                    </div>
+                    <button class="navbar-toggler ml-auto collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu ml-auto">
+                                       <li><a class="active" href="index.html">Home</a></li>
+
+                                       <li><a href="#">Features</a></li>
+                                       <li><a href="#"><font color="orange">btc</font></a></li>
+                                       <li><a href="#">Blog</a></li>
+
+                                <li>
+                                    <a href="#">
+                                        <font color="orange">1 btc</font>=
+                                        <font color="white">$55,956</font><br>
+                                        <font color="skyblue">1 Eth</font>=
+                                        <font color="white">$3,482</font><br>
+                                        <font color="teal">1 SCO</font>=
+                                        <font color="white">$0.002</font>
+                                    </a>
+                                </li>
+                            <div class="right-area header-action d-flex align-items-center">
+                                <button type="button" class="cmn-btn-alt cmn-btn" data-toggle="modal"
+                                    data-target="#signUpModalLong">
+                                    Register
+                                </button>
+                                <div class="modal register fade" id="signUpModalLong" tabindex="-1" role="dialog"
+                                    aria-labelledby="signUpModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="signUpModalLongTitle">
+                                                    FreeSmartCoin
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p> <a href="javascript:void(0)">REGISTER </a></p>
+                                                <div class="form-area">
+                                                    <form action="{% url 'register' %}" method="POST">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <label>Email Address</label>
+                                                            <input class="form-control" name="email"
+                                                                placeholder="Registered Email Address." type="email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>First Name</label>
+                                                            <input class="form-control" name="first_name"
+                                                                placeholder="Enter First Name" type="text">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Last Name</label>
+                                                            <input class="form-control" name="last_name"
+                                                                placeholder="Enter Last Name" type="text">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Username</label>
+                                                            <input class="form-control" name="username"
+                                                                placeholder="Enter Username" type="text">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Password</label>
+                                                            <input class="form-control" name="password" placeholder="Password"
+                                                                type="password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Confirm Password</label>
+                                                            <input class="form-control" name="password2" placeholder="Confirm Password"
+                                                                type="password">
+                                                        </div>
+                                                        <div class="form-group d-flex justify-content-end">
+                                                            <label><a href="javascript:void(0)">Already a member?</a></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="cmn-btn cmn-btn-alt"> Sign
+                                                                Up
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                    <div class="reg-with">
+                                                        <p>Register in directly with</p>
+                                                        <div class="social-area d-flex justify-content-center">
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/twitter.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/facebook.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/linkedin.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/google.png' %}" alt="image"></a>
+                                                        </div>
+                                                    </div><br>
+                                                    <center>
+                                                        <button type="button" class="cmn-btn-small" data-toggle="modal"
+                                                                data-target="#tlc">
+                                                                Terms & Condition
+                                                        </button>
+                                                        <button type="button" class="justify-content-end" data-toggle="modal"
+                                                                data-target="#privacy">
+                                                                Privacy Policy
+                                                        </button>
+                                                    </center>
+                                                    <div class="modal register fade" id="tlc"
+                                                    tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+                                                        FreeSmartCoin
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h5>Terms of  Use</h5>
+                                                    <div class="form-area">
+                                                        <form action="#">
+                                                            <div class="form-group">
+                                                                <label>terms and coditios here</label>
+                                                                </div>
+
+                                                        </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal register fade" id="privacy"
+                                        tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">
+                                            FreeSmartCoin
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>Privacy Policy</h5>
+                                        <div class="form-area">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label>privacy policy here</label>
+                                                    </div>
+
+                                            </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="cmn-btn" data-toggle="modal"
+                                    data-target="#signInModalLong">
+                                    Sign In
+                                </button>
+                                <div class="modal register fade" id="signInModalLong" tabindex="-1" role="dialog"
+                                    aria-labelledby="signInModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="signInModalLongTitle">
+                                                    FreeSmartCoin
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Login Here</h5>
+                                                <!-- Alerts -->
+                                                {% include 'partials/_alerts.html' %}
+                                                <div class="form-area">
+                                                    <form action="{% url 'login' %}" method="POST">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            <label>Username or BTC Address</label>
+                                                            <input class="form-control" name="username"
+                                                                placeholder="Username" type="text" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Password</label>
+                                                            <input class="form-control" name="password" placeholder="Password"
+                                                                type="password" required>
+                                                        </div>
+                                                        <div class="form-group d-flex">
+                                                            <div class="checkbox_wrapper">
+                                                                <input type="checkbox" />
+                                                                <label></label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="cmn-btn cmn-btn-alt"> Login
+                                                                NOw!</button>
+                                                        </div>
+                                                    </form>
+                                                    <div class="reg-with">
+                                                        <p>Login directly with</p>
+                                                        <div class="social-area d-flex justify-content-center">
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/twitter.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/facebook.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/linkedin.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/google.png' %}" alt="image"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- banner-section start -->
+    <section id="banner-section">
+        <div class="banner-content d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="main-content">
+                            <div class="top-area justify-content-left text-center">
+                                <h1>Play & gain <br> <span>rewards</span></h1>
+                                <p><i class="fas fa-angle-double-right"></i><font color="orange">  FREE, FUN & FAIR REWARDS FOR EVERYONE</p></font>
+                                <p> <i class="fas fa-angle-double-right"></i><font color="skyblue">  WIN UP TO $200 IN FREE BITCOINS/ETHERIUM</p></font>
+                                <p><i class="fas fa-angle-double-right"></i><font color="orange">  WIN DAILY JACKPOTS UP TO $1000</p></font>
+                                <p><i class="fas fa-angle-double-right"></i><font color="skyblue">  50% REFERRAL COMMISIONS FOR LIFE</p></font>
+                                <p><i class="fas fa-angle-double-right"></i><font color="orange">  FREE WEEKLY LOTTERY WITH BIG PRIZES</p></font>
+                                <p><i class="fas fa-angle-double-right"></i><font color="skyblue">  WIN A LAMBO WITH GOLDEN TICKETS</p> </font>                               </p>
+                                <button type="button" class="cmn-btn" data-toggle="modal"
+                                    data-target="#signUpModalLong">
+                                    Start Playing!
+                                </button>
+                                <div class="modal register fade" id="signUpModalReg" tabindex="-1" role="dialog"
+                                    aria-labelledby="signUpModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="signUpModalLongTitle">
+                                                    FreeSmartCoin
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5 class="welcome">Welcome back</h5>
+                                                <!-- Alerts -->
+              {% include 'partials/_alerts.html' %}
+                                                <p>Not a member? <a href="javascript:void(0)">REGISTER</a></p>
+                                                <div class="form-area">
+                                                    <form action="#">
+                                                        <div class="form-group">
+                                                            <label>Email Address</label>
+                                                            <input class="form-control"
+                                                                placeholder="Registered Email Address." type="email" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Password</label>
+                                                            <input class="form-control" placeholder="Password"
+                                                                type="password" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Confirm Password</label>
+                                                            <input class="form-control" placeholder="Repeat Password"
+                                                                type="password" required>
+                                                        </div>
+                                                        <div class="form-group d-flex justify-content-end">
+                                                            <label><a href="javascript:void(0)">Already a member?</a></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="cmn-btn cmn-btn-alt"> Sign
+                                                                In</button>
+                                                        </div>
+                                                    </form>
+                                                    <div class="reg-with">
+                                                        <p>Register in directly with</p>
+                                                        <div class="social-area d-flex justify-content-center">
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/twitter.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/facebook.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/linkedin.png' %}" alt="image"></a>
+                                                            <a href="javascript:void(0)"><img src="{% static 'images/google.png' %}" alt="image"></a>
+                                                        </div>
+                                                    </div><br>
+                                                    <center>
+                                                        <button type="button" class="cmn-btn-small" data-toggle="modal"
+                                                                data-target="#tlc1">
+                                                                Terms & Condition
+                                                        </button>
+                                                        <button type="button" class="justify-content-end" data-toggle="modal"
+                                                                data-target="#privacy1">
+                                                                Privacy Policy
+                                                        </button>
+                                                    </center>
+                                                    <div class="modal register fade" id="tlc1"
+                                                    tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+                                                        FreeSmartCoin
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h5>Terms of  Use</h5>
+                                                    <div class="form-area">
+                                                        <form action="#">
+                                                            <div class="form-group">
+                                                                <label>terms and coditios here</label>
+                                                                </div>
+
+                                                        </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal register fade" id="privacy1"
+                                        tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">
+                                            FreeSmartCoin
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>Privacy Policy</h5>
+                                        <div class="form-area">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label>privacy policy here</label>
+                                                    </div>
+
+                                            </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="ani-img">
+                                        <img class="cir-1" src="{% static 'images/coin-1.png' %}" alt="circle">
+                                        <img class="cir-2" src="{% static 'images/coin-2.png' %}" alt="circle">
+                                        <img class="cir-3" src="{% static 'images/coin-3.png' %}" alt="circle">
+                                        <img class="cir-4" src="{% static 'images/coin-4.png' %}" alt="circle">
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6">
+                                            <div class="bottom-area text-center">
+                                                <img src="{% static 'images/banner-illu.png' %}" alt="banner-circle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ani-illu">
+                                        <img class="left-1 wow fadeInUp" src="{% static 'images/banner-left-obj.png' %}" alt="image">
+                                        <img class="right-2 wow fadeInUp" src="{% static 'images/banner-right-obj.png' %}" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-item d-flex">
+                                    <div class="left-area align-items-center">
+                                        <img src="{% static 'images/banner-bottom-1.png' %}" alt="image">
+                                    </div>
+                                    <div class="right-area">
+                                        <h4>PLAY</h4>
+                                        <p> FREE WEEKLY LOTTERY WITH BIG PRIZES</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-item d-flex">
+                                    <div class="left-area align-items-center">
+                                        <img src="{% static 'images/banner-bottom-2.png' %}" alt="image">
+                                    </div>
+                                    <div class="right-area">
+                                        <h4>WIN</h4>
+                                        <p> WIN DAILY JACKPOTS UP TO $1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-item d-flex">
+                                    <div class="left-area align-items-center">
+                                        <img src="{% static 'images/banner-bottom-3.png' %}" alt="image">
+                                    </div>
+                                    <div class="right-area">
+                                        <h4>EARN</h4>
+                                        <p>50% REFERRAL COMMISIONS FOR LIFE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner-section end -->
+
+    <!-- Feature Game In start -->
+    <section id="feature-game-section">
+        <div class="overlay pt-120 pb-120">
+            <div class="container-fruid wow fadeInUp">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 col-md-9 col-sm-8">
+                            <div class="section-header">
+                                <h2 class="title">FEATUREs</h2>
+                                <h5>FREE BITCOINS EVERY HOUR</h5>
+                                <p>Try your luck every hour playing our simple game and you could win up to $200 in free bitcoins!</p><br>
+                                <h5>REFERRAL CONTEST</h5>
+                                <p>Join our referral program and bring your friends over to SCO. Rank in the top 10 by combined wagering volume of your referrals to win the contest and up to $10,900 in BTC every month!</p>
+
+
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-3 col-md-3 col-sm-4 d-flex align-items-center justify-content-center justify-content-sm-end">
+                            <div class="right-area">
+                                <a href="games.html" class="cmn-btn-alt cmn-btn">Show all <img src="{% static 'images/double-right.png' %}"
+                                        alt="image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-game-carousel">
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-1.png' %}" alt="image"></a>
+                    </div>
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-2.png' %}" alt="image"></a>
+                    </div>
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-3.png' %}" alt="image"></a>
+                    </div>
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-4.png' %}" alt="image"></a>
+                    </div>
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-5.png' %}" alt="image"></a>
+                    </div>
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-6.png' %}" alt="image"></a>
+                    </div>
+                    <div class="single-item">
+                        <a href="javascript:void(0)"><img src="{% static 'images/game-7.png' %}" alt="image"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature Game In end -->
+    <!-- Level up In start -->
+    <section id="level-up-section">
+        <div class="overlay pt-120 pb-120">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="left-area d-flex justify-content-lg-center">
+                            <img src="{% static 'images/level-up-left.png' %}" alt="image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="container wow fadeInUp">
+                            <div class="row">
+                                <div class="col-lg-10 align-items-center right-area">
+                                    <div class="section-header">
+                                        <h2 class="title">LEVEL UP! WIN BIG</h2>
+                                        <p>Play and win big in prize money and rewards</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 d-flex justify-content-between">
+                                            <div class="single-item">
+                                                <img src="{% static 'images/freespins-icon.png' %}" alt="image">
+                                                <h6>$1000 Daily Jackpot</h6>
+                                            </div>
+                                            <div class="single-item">
+                                                <img src="{% static 'images/bonuses-icon.png' %}" alt="image">
+                                                <h6>Free Weekly Lottery</h6>
+                                            </div>
+                                            <div class="single-item">
+                                                <img src="{% static 'images/tournaments-icon.png' %}" alt="image">
+                                                <h6>Win Upto $200 in BTC/ETH</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Level up In end -->
+
+    <!-- Todays winner In start -->
+    <section id="todays-winner-section" class="home">
+        <div class="overlay pt-120 pb-120">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-grid align-items-center">
+                        <div class="section-header">
+                            <h2 class="title">Biggest <span>Winners</span> today</h2>
+                            <button type="button" class="cmn-btn-alt cmn-btn" data-toggle="modal"
+                            data-target="#signUpModalLong">
+                            Start Playing!
+                            </button>
+                            <div class="modal register fade" id="signUpModalLong" tabindex="-1" role="dialog"
+                                aria-labelledby="signUpModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="signUpModalLongTitle">
+                                                <img src="{% static 'images/logo.png' %}" alt="image">
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <img src="{% static 'images/cross-icon-1.png' %}" alt="image">
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 class="welcome">Welcome back</h5>
+                                            <p>Not a member? <a href="javascript:void(0)">REGISTER</a></p>
+                                            <div class="form-area">
+                                                <form action="#">
+                                                    <div class="form-group">
+                                                        <label>Email Address</label>
+                                                        <input class="form-control"
+                                                            placeholder="Registered Email Address." type="email" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Password</label>
+                                                        <input class="form-control" placeholder="Password"
+                                                            type="password" required>
+                                                    </div>
+                                                    <div class="form-group d-flex justify-content-end">
+                                                        <label><a href="javascript:void(0)">Not a member?</a></label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="cmn-btn cmn-btn-alt"> Sign
+                                                            In</button>
+                                                    </div>
+                                                </form>
+                                                <div class="reg-with">
+                                                    <p>Register in directly with</p>
+                                                    <div class="social-area d-flex justify-content-center">
+                                                        <a href="javascript:void(0)"><img src="{% static 'images/twitter.png' %}" alt="image"></a>
+                                                        <a href="javascript:void(0)"><img src="{% static 'images/facebook.png' %}" alt="image"></a>
+                                                        <a href="javascript:void(0)"><img src="{% static 'images/linkedin.png' %}" alt="image"></a>
+                                                        <a href="javascript:void(0)"><img src="{% static 'images/google.png' %}" alt="image"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex align-items-end jus-end">
+                        <div class="mid-area">
+                            <img src="{% static 'images/tropy.png' %}" alt="image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="title-area">
+                            <img src="{% static 'images/ribbon.png' %}" alt="image">
+                            <h5>Biggest Winners</h5>
+                        </div>
+                        <div class="winner-chart">
+                            <span class="ribbon">Top Winner</span>
+                            <div class="single-item d-flex justify-content-between align-items-center">
+                                <div class="left-area d-flex align-items-center">
+                                    <img src="{% static 'images/win-1.png' %}" class="pos" alt="image">
+                                    <a href="javascript:void(0)" class="name-area d-flex align-items-center">
+                                        <img src="{% static 'images/user-1.png' %}" alt="image">
+                                        <h6>User ID: 3427686</h6>
+                                    </a>
+                                </div>
+                                <div class="win-price">
+                                    <span>+</span>
+                                    <span>56.65994</span>
+                                    <span class="cur">ETH</span>
+                                    <span><img src="{% static 'images/double-right-alt.png' %}" alt="image"></span>
+                                </div>
+                            </div>
+                            <div class="single-item d-flex justify-content-between align-items-center">
+                                <div class="left-area d-flex align-items-center">
+                                    <img src="{% static 'images/win-2.png' %}" class="pos" alt="image">
+                                    <a href="javascript:void(0)" class="name-area d-flex align-items-center">
+                                        <img src="{% static 'images/user-2.png' %}" alt="image">
+                                        <h6>User ID: 1234567</h6>
+                                    </a>
+                                </div>
+                                <div class="win-price">
+                                    <span>+</span>
+                                    <span>56.65994</span>
+                                    <span class="cur">ETH</span>
+                                    <span><img src="{% static 'images/double-right-alt.png' %}" alt="image"></span>
+                                </div>
+                            </div>
+                            <div class="single-item d-flex justify-content-between align-items-center">
+                                <div class="left-area d-flex align-items-center">
+                                    <img src="{% static 'images/win-3.png' %}" class="pos" alt="image">
+                                    <a href="javascript:void(0)" class="name-area d-flex align-items-center">
+                                        <img src="i{% static 'mages/user-3.png' %}" alt="image">
+                                        <h6>User ID: 985678</h6>
+                                    </a>
+                                </div>
+                                <div class="win-price">
+                                    <span>+</span>
+                                    <span>56.65994</span>
+                                    <span class="cur">ETH</span>
+                                    <span><img src="{% static 'images/double-right-alt.png' %}" alt="image"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Todays winner In end -->
+
+    <!-- Counter In start -->
+    <section id="counter-section">
+        <div class="overlay pt-120 pb-120">
+            <div class="container">
+                <div class="row mb-40-none">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-item mb-40 text-center">
+                            <img src="{% static 'images/counter-icon-1.png' %}" alt="image">
+                            <span class="count">$ <span class="counter">133501</span></span>
+                            <h6>JACKPOT</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-item text-center">
+                            <img src="{% static 'images/counter-icon-2.png' %}" alt="image">
+                            <span class="count">$ <span class="counter">81237619</span></span>
+                            <h6>TOTAL PAID</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-item text-center">
+                            <img src="{% static 'images/counter-icon-3.png' %}" alt="image">
+                            <span class="count"><span class="counter">100</span>%</span>
+                            <h6>SECURE</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-item mb-40 text-center">
+                            <img src="{% static 'images/counter-icon-4.png' %}" alt="image">
+                            <span class="count"><span class="counter">24</span>/<span class="counter">7</span></span>
+                            <h6>SUPPORT</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter In end -->
+
+    <!-- Latest Activites In start -->
+    <section id="latest-activites-section">
+        <div class="ani-div">
+            <img class="obj-1" src="{% static 'images/star.png' %}" alt="image">
+            <img class="obj-2" src="{% static 'images/star.png' %}" alt="image">
+            <img class="obj-3" src="{% static 'images/star-2.png' %}" alt="image">
+        </div>
+        <div class="overlay pt-120">
+            <div class="container wow fadeInUp">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="section-header">
+                            <h2 class="title">Latest Activites</h2>
+                            <p>Each time you reach a new level you'll get a reward</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-end justify-cen">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="bets-tab" data-toggle="tab" href="#bets" role="tab"
+                                    aria-controls="bets" aria-selected="true">Latest Bets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contest-tab" data-toggle="tab" href="#contest" role="tab"
+                                    aria-controls="contest" aria-selected="false">Contest</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="bets" role="tabpanel" aria-labelledby="bets-tab">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-start" scope="col">Game</th>
+                                                <th scope="col">Player</th>
+                                                <th scope="col">Bet ID</th>
+                                                <th scope="col">Payout</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-1.png' %}" alt="image">Fishing Disco</a></th>
+                                                <td>Bessie Cooper</td>
+                                                <td>30320267096</td>
+                                                <td>0.70X</td>
+                                                <td><img src="{% static 'images/table-icon-1.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-2.png' %}" alt="image">Ninjax</a></th>
+                                                <td>Eleanor Pena</td>
+                                                <td>30320267096</td>
+                                                <td>2.21X</td>
+                                                <td><img src="{% static 'images/table-icon-2.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-3.png' %}" alt="image">Dragons Gate</a></th>
+                                                <td>Cody Fisher</td>
+                                                <td>30320267096</td>
+                                                <td>3.01X</td>
+                                                <td><img src="{% static 'images/table-icon-3.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-4.png' %}" alt="image">King of Glory</a></th>
+                                                <td>Arlene McCoy</td>
+                                                <td>30320267096</td>
+                                                <td>1.11X</td>
+                                                <td><img src="images/table-icon-4.png" alt="image">- 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-5.png' %}" alt="image">Dice</a></th>
+                                                <td>Leslie Alexander</td>
+                                                <td>30320267096</td>
+                                                <td>0.00X</td>
+                                                <td><img src="{% static 'images/table-icon-5.png" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-6.png' %}" alt="image">League Of Legends</a></th>
+                                                <td>Theresa Webb</td>
+                                                <td>30320267096</td>
+                                                <td>3.19X</td>
+                                                <td><img src="{% static 'images/table-icon-6.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contest" role="tabpanel" aria-labelledby="contest-tab">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-start" scope="col">Game</th>
+                                                <th scope="col">Player</th>
+                                                <th scope="col">Bet ID</th>
+                                                <th scope="col">Payout</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-1.png' %}" alt="image">Fishing Disco</a></th>
+                                                <td>Bessie Cooper</td>
+                                                <td>30320267096</td>
+                                                <td>0.70X</td>
+                                                <td><img src="{% static 'images/table-icon-1.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-2.png' %}" alt="image">Ninjax</a></th>
+                                                <td>Eleanor Pena</td>
+                                                <td>30320267096</td>
+                                                <td>2.21X</td>
+                                                <td><img src="{% static 'images/table-icon-2.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-3.png' %}" alt="image">Dragons Gate</a></th>
+                                                <td>Cody Fisher</td>
+                                                <td>30320267096</td>
+                                                <td>3.01X</td>
+                                                <td><img src="{% static 'images/table-icon-3.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-4.png' %}" alt="image">King of Glory</a></th>
+                                                <td>Arlene McCoy</td>
+                                                <td>30320267096</td>
+                                                <td>1.11X</td>
+                                                <td><img src="{% static 'images/table-icon-4.png' %}" alt="image">- 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-5.png' %}" alt="image">Dice</a></th>
+                                                <td>Leslie Alexander</td>
+                                                <td>30320267096</td>
+                                                <td>0.00X</td>
+                                                <td><img src="{% static 'images/table-icon-5.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><a href="javascript:void(0)"><img src="{% static 'images/game-icon-6.png' %}" alt="image">League Of Legends</a></th>
+                                                <td>Theresa Webb</td>
+                                                <td>30320267096</td>
+                                                <td>3.19X</td>
+                                                <td><img src="{% static 'images/table-icon-6.png' %}" alt="image">+ 0.00312150</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Available Game In end -->
+
+    <!-- faq start -->
+    <section id="faq-section">
+        <div class="overlay pt-120 pb-120">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <div class="section-header">
+                            <h2 class="title">Our most common questions</h2>
+                            <p>Do you have a question about gainio? Please contact us! We would love
+                                to answer your questions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-5 d-flex align-items-center cus-mb">
+                        <div class="left-area">
+                            <span>
+                                <img src="{% static 'images/faq-left.png' %}" alt="image">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInUp">
+                        <div id="accordion-one">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            Can I earn money playing on Gainio?
+                                        </button>
+                                    </h6>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordion-one">
+                                    <div class="card-body">
+                                        <p>Duis sapien justo, posuere interdum mauris eu, tincidunt placerat ante.
+                                            Curabitur aliquet leo ipsum, at maximus dolor fringilla vel. Aliquam
+                                            sagittis elementum volutpat. Vestibulum vel arcu nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Are there any benefits other than money?
+                                        </button>
+                                    </h6>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordion-one">
+                                    <div class="card-body">
+                                        <p>Duis sapien justo, posuere interdum mauris eu, tincidunt placerat ante.
+                                            Curabitur aliquet leo ipsum, at maximus dolor fringilla vel. Aliquam
+                                            sagittis elementum volutpat. Vestibulum vel arcu nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            What is a challenge, and how do I join one?
+                                        </button>
+                                    </h6>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordion-one">
+                                    <div class="card-body">
+                                        <p>Duis sapien justo, posuere interdum mauris eu, tincidunt placerat ante.
+                                            Curabitur aliquet leo ipsum, at maximus dolor fringilla vel. Aliquam
+                                            sagittis elementum volutpat. Vestibulum vel arcu nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            Can I earn money playing on Gainio?
+                                        </button>
+                                    </h6>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-parent="#accordion-one">
+                                    <div class="card-body">
+                                        <p>Duis sapien justo, posuere interdum mauris eu, tincidunt placerat ante.
+                                            Curabitur aliquet leo ipsum, at maximus dolor fringilla vel. Aliquam
+                                            sagittis elementum volutpat. Vestibulum vel arcu nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            Who do I compete against in the challenges?
+                                        </button>
+                                    </h6>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                    data-parent="#accordion-one">
+                                    <div class="card-body">
+                                        <p>Duis sapien justo, posuere interdum mauris eu, tincidunt placerat ante.
+                                            Curabitur aliquet leo ipsum, at maximus dolor fringilla vel. Aliquam
+                                            sagittis elementum volutpat. Vestibulum vel arcu nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseSix" aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                            How does G-Loot collect game data?
+                                        </button>
+                                    </h6>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                    data-parent="#accordion-one">
+                                    <div class="card-body">
+                                        <p>Duis sapien justo, posuere interdum mauris eu, tincidunt placerat ante.
+                                            Curabitur aliquet leo ipsum, at maximus dolor fringilla vel. Aliquam
+                                            sagittis elementum volutpat. Vestibulum vel arcu nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- faq end -->
+
+    <!-- Footer Section start -->
+    <footer id="footer-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-top pt-120 pb-120">
+                            <div class="side-contant">
+                                <div class="left">
+                                    <img class="bg" src="{% static 'images/footer-left-bg.png' %}" alt="image">
+                                    <img class="bg circle" src="{% static 'images/footer-left-circle.png' %}" alt="image">
+                                    <img class="top" src="{% static 'images/footer-left-top.png' %}" alt="image">
+                                </div>
+                                <div class="right">
+                                    <img src="{% static 'images/footer-right.png' %}" alt="image">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-6 col-sm-10">
+                                    <div class="section-header text-center">
+                                        <h4 class="title">Subscribe</h4>
+                                        <p>To Get Exclusive Benefits</p>
+                                    </div>
+                                    <form action="#">
+                                        <div class="subscribe">
+                                            <input type="email" placeholder="Enter Your Email Address">
+                                            <button class="btn">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-area pt-120">
+                    <div class="row d-flex header-area">
+                        <div class="col-lg-8 col-md-8 d-flex justify-content-md-between justify-content-center align-items-center">
+                            <div class="logo-section">
+                                <a class="site-logo site-title" href="index.html">FreeSmartCoin</a>
+                            </div>
+                            <ul class="align-items-left">
+                                <li><a href="#" class="active">promotions</a></li>
+                                <li><a href="#">sign up</a></li>
+                                <li><a href="#">BTC & ETH news</a></li>
+                            </ul>
+                            <ul class="align-items-left">
+                                <li><a href="#" class="active">ETH & BTC PRICES</a></li>
+                                <li><a href="#">ETH & BTC PRICES</a></li>
+                                <li><a href="@">BTC & ETH ACCOUNT</a></li>
+                            </ul>
+                            <ul class="align-items-left">
+                                <li><a href="#" class="active">Adverts</a></li>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="@">link 2</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <div class="social-area d-flex">
+                                <a href="javascript:void(0)"><img src="{% static 'images/twitter.png' %}" alt="image"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'images/facebook.png' %}" alt="image"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'images/linkedin.png' %}" alt="image"></a>
+                                <a href="javascript:void(0)"><img src="{% static 'images/google.png' %}" alt="image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="main-content">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8 col-md-8 col-sm-12 d-flex justify-content-start align-items-center justify-cen order-pro">
+                            <div class="left-area">
+                                <p>Copyright © FreeSmartCoin | ALL RIGHTS RESERVED
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-end justify-cen">
+                            <div class="right-area">
+                                <select name="lang" style="display: none;">
+                                    <option value="en">English</option>
+                                    <option value="bn">Bangla</option>
+                                    <option value="hn">Hindi</option>
+                                </select><div class="nice-select" tabindex="0"><span class="current">English</span><ul class="list"><li data-value="en" class="option selected">English</li><li data-value="bn" class="option">Bangla</li><li data-value="hn" class="option">Hindi</li></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-section end -->
+
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/fontawesome.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
